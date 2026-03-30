@@ -1,0 +1,113 @@
+================================================================================
+                    RÉPARTITION DES TÂCHES – MINI-PROJET WEB DESIGN
+                                   Mars 2026
+================================================================================
+
+Binôme :
+- Tiavina – backoffice, authentification, documentation, Docker
+- Notiavina : (prénom) – SEO, optimisation, contenu, tests Lighthouse
+
+--------------------------------------------------------------------------------
+1. AUTHENTIFICATION DU BACKOFFICE
+--------------------------------------------------------------------------------
+
+Tâche : Créer la page de connexion (login.php) avec formulaire et session
+Responsable : Tiavina
+Titre du commit : feat: add login page for backoffice
+Section Markdown : ### 12. Authentification backoffice – Page de connexion
+
+Tâche : Implémenter la déconnexion (logout.php) et la gestion de session
+Responsable : Tiavina
+Titre du commit : feat: add logout and session handling
+Section Markdown : ### 12. Authentification backoffice – Déconnexion
+
+Tâche : Protéger toutes les pages admin (vérification de session)
+Responsable : Tiavina
+Titre du commit : feat: add authentication check on admin pages
+Section Markdown : ### 12. Authentification backoffice – Contrôle d’accès
+
+Tâche : Ajouter l’utilisateur par défaut (admin/admin) dans la base
+Responsable : Tiavina
+Titre du commit : docs: add default credentials for backoffice
+Section Markdown : ### 12. Authentification backoffice – Identifiants par défaut
+
+--------------------------------------------------------------------------------
+2. OPTIMISATION SEO ET TESTS
+--------------------------------------------------------------------------------
+
+Tâche : Ajouter les attributs alt sur toutes les images (FO et BO)
+Responsable : Notiavina
+Titre du commit : fix: add alt attributes to all images
+Section Markdown : ### 13. SEO – Attributs alt
+
+Tâche : Vérifier et corriger la hiérarchie des titres (h1 à h6) sur toutes les pages
+Responsable : Notiavina
+Titre du commit : fix: correct heading hierarchy for SEO
+Section Markdown : ### 13. SEO – Hiérarchie des titres
+
+Tâche : Ajouter les balises meta (description, robots, canonical) sur toutes les pages
+Responsable : Notiavina
+Titre du commit : feat: add meta tags for SEO on all pages
+Section Markdown : ### 13. SEO – Balises meta
+
+Tâche : Créer le fichier robots.txt et générer un sitemap.xml dynamique
+Responsable : Notiavina
+Titre du commit : feat: add sitemap.xml and robots.txt
+Section Markdown : ### 13. SEO – Sitemap et robots.txt
+
+Tâche : Lancer les tests Lighthouse (mobile/desktop) et corriger les problèmes (performance, accessibilité)
+Responsable : Notiavina
+Titre du commit : fix: optimize for Lighthouse scores
+Section Markdown : ### 13. SEO – Test Lighthouse
+
+--------------------------------------------------------------------------------
+3. DOCUMENTATION ET LIVRAISON
+--------------------------------------------------------------------------------
+
+Tâche : Réaliser le schéma de modélisation de la base de données (diagramme)
+Responsable : Tiavina
+Titre du commit : docs: add database modeling
+Section Markdown : ### 14. Documentation technique – Modélisation BDD
+
+Tâche : Faire les captures d’écran du Front‑Office et du Back‑Office
+Responsable : Tiavina
+Titre du commit : docs: add screenshots of FO and BO
+Section Markdown : ### 14. Documentation technique – Captures d’écran
+
+Tâche : Rédiger le document technique complet (installation, fonctionnement, choix techniques)
+Responsable : Tiavina
+Titre du commit : docs: final technical documentation
+Section Markdown : ### 14. Documentation technique – Document final
+
+Tâche : Finaliser la configuration Docker (docker-compose, Dockerfile) pour la livraison
+Responsable : Tiavina
+Titre du commit : chore: finalize Docker setup for delivery
+Section Markdown : ### 15. Livraison Docker
+
+Tâche : Créer l’archive ZIP et mettre en ligne le dépôt public (GitHub/GitLab)
+Responsable : Notiavina
+Titre du commit : chore: prepare final delivery
+Section Markdown : ### 16. Livraison finale
+
+--------------------------------------------------------------------------------
+4. CONTENU DU SITE (GUERRE EN IRAN)
+--------------------------------------------------------------------------------
+
+Tâche : Créer au moins 5 articles cohérents sur le thème (titres, résumés, images, contenu HTML)
+Responsable : Notiavina
+Titre du commit : content: add articles about Iran war
+Section Markdown : ### 17. Alimentation en contenu
+
+Tâche : Vérifier l’affichage dynamique sur la page d’accueil et la page détail
+Responsable : Notiavina
+Titre du commit : test: verify content display on FO
+Section Markdown : ### 17. Alimentation en contenu – Vérification
+
+--------------------------------------------------------------------------------
+CONSIGNES GÉNÉRALES
+--------------------------------------------------------------------------------
+- Chaque commit doit être atomique (une seule tâche) et suivre le titre indiqué.
+- Les sections Markdown listées doivent être ajoutées ou complétées dans le fichier
+  "Historique des demandes - Conversation.md".
+- Tester ensemble avant la livraison finale pour éviter les régressions.
+- L’archive ZIP doit contenir tout le projet fonctionnel avec Docker.

@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: iran-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/var/www/html/public
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+      - postgres
+
+  php:
+    build:
+      context: ./php
+    container_name: iran-php
+    volumes:
+      - ./public:/var/www/html/public
+      - ./src:/var/www/html/src
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=iran_news
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: iran-postgres
+    environment:
+      POSTGRES_DB: iran_news
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
