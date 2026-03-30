@@ -1,9 +1,14 @@
 <?php
 declare(strict_types=1);
 
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location: /login.php');
+    exit;
+}
+
 require_once __DIR__ . '/../src/auth.php';
 
-require_authentication();
 $user = current_user();
 ?>
 <!DOCTYPE html>
