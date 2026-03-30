@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS articles (
 CREATE INDEX IF NOT EXISTS idx_articles_slug ON articles(slug);
 CREATE INDEX IF NOT EXISTS idx_articles_status ON articles(status);
 
+-- Generated with password_hash('admin', PASSWORD_DEFAULT)
 INSERT INTO utilisateurs (username, password)
-VALUES ('admin', crypt('admin', gen_salt('bf')))
+VALUES ('admin', '$2y$12$VnOYqGXRIOt0pUBGvgf2rusmY/JjVnpMrCLOghSqVQozmaTV7dDPK')
 ON CONFLICT (username) DO NOTHING;

@@ -1,3 +1,36 @@
+# Mini-projet Web Design – Tâches pour Notiavina
+
+## Rôle principal
+SEO, optimisation, contenu, tests Lighthouse, livraison finale.
+
+---
+
+## 1. Optimisation SEO (On‑Page et Technique)
+
+### ✅ Attributs `alt` pour toutes les images
+- Ajouter un `alt` descriptif pour chaque image dans :
+  - le front-office (accueil, détail article)
+  - le backoffice (aperçu des articles)
+- Si l’image est purement décorative, utiliser `alt=""`.
+- **Commit :** `fix: add alt attributes to all images`
+
+### ✅ Hiérarchie des titres (`h1` à `h6`)
+- Vérifier qu’il y a un seul `h1` par page.
+- Structurer les titres dans l’ordre logique (`h2` pour les sous‑sections, etc.).
+- Appliquer sur toutes les pages (FO et BO).
+- **Commit :** `fix: correct heading hierarchy for SEO`
+
+### ✅ Balises meta
+- Ajouter `meta name="description"` sur chaque page avec un résumé unique.
+- Ajouter `meta name="robots"` avec `index, follow` pour les pages publiques, `noindex, nofollow` pour le backoffice.
+- Ajouter un lien canonique (`<link rel="canonical">`) pour éviter le contenu dupliqué.
+- **Commit :** `feat: add meta tags for SEO on all pages`
+
+### ✅ Sitemap XML et robots.txt
+- Créer `robots.txt` à la racine avec :
+User-agent: *
+Allow: /
+Sitemap: http://localhost/sitemap.xml
 - Générer dynamiquement `sitemap.xml` listant toutes les URLs du front‑office (accueil, chaque article).
 - **Commit :** `feat: add sitemap.xml and robots.txt`
 

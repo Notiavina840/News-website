@@ -39,6 +39,7 @@ function attempt_login(string $username, string $password): bool
     ensure_session_started();
     $_SESSION['user_id'] = (int) $user['id'];
     $_SESSION['username'] = $user['username'];
+    $_SESSION['user'] = $user['username'];
 
     return true;
 }
